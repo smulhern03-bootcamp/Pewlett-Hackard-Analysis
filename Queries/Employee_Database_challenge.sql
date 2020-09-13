@@ -1,4 +1,5 @@
--- Select info and join tables
+-- Deliverable 1
+--Retirement titles
 select e.emp_no, 
 		e.first_name, 
 		e.last_name,
@@ -15,7 +16,7 @@ ORDER BY e.emp_no;
 select emp_no, first_name, last_name, title
 from retire_titles;
 
--- Use Dictinct with Orderby to remove duplicate rows
+--Unique Titles
 SELECT DISTINCT ON (emp_no) emp_no, 
 first_name, 
 last_name, 
@@ -24,7 +25,7 @@ INTO unique_titles
 FROM retire_titles
 ORDER BY emp_no, to_date DESC;
 
---Get counts of employee titles.
+--Retiring Titles
 Select Count (title), title
 INTO retiring_titles
 From unique_titles
