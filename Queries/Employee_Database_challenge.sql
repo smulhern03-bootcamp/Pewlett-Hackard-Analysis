@@ -32,7 +32,7 @@ From unique_titles
 GROUP BY title
 ORDER BY count DESC;
 
-Deliverable 2
+-- Deliverable 2
 SELECT DISTINCT ON (e.emp_no) e.emp_no, 
 		e.first_name, 
 		e.last_name,
